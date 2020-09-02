@@ -405,7 +405,7 @@ class SwagProcessor(DataProcessor):
                 # common beginning of each
                 # choice is stored in "sent2".
                 contexts=[line[0]]*120,
-                endings=[line[x] for x in range(3:123)],
+                endings=[line[x] for x in range(3,123)],
                 label=line[123],
             )
             for line in lines[1:]  # we skip the line with the column names
