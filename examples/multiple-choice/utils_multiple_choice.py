@@ -387,7 +387,7 @@ class SwagProcessor(DataProcessor):
 
     def get_labels(self):
         """See base class."""
-        return [x for x in range(120)] # 120
+        return [str(x) for x in range(120)] # 120
 
     def _read_csv(self, input_file):
         with open(input_file, "r", encoding="utf-8") as f:
