@@ -395,7 +395,7 @@ class SwagProcessor(DataProcessor):
 
     def _create_examples(self, lines: List[List[str]], type: str):
         """Creates examples for the training and dev sets."""
-        if type == "train" and lines[0][-1] != "label":
+        if type == "train" and lines[0][-2] != "label":
             raise ValueError("For training, the input file must contain a label column.")
 
         examples = [
