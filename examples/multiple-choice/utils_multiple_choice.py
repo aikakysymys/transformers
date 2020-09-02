@@ -404,8 +404,8 @@ class SwagProcessor(DataProcessor):
                 question=line[5],  # in the swag dataset, the
                 # common beginning of each
                 # choice is stored in "sent2".
-                contexts=[line[0]]*120 #[line[4], line[4], line[4], line[4]],
-                endings=[line[x] for x in range(3:123)]#[line[7], line[8], line[9], line[10]],
+                contexts=[line[0]]*120, #[line[4], line[4], line[4], line[4]],
+                endings=[line[x] for x in range(3:123)],#[line[7], line[8], line[9], line[10]],
                 label=line[123],
             )
             for line in lines[1:]  # we skip the line with the column names
