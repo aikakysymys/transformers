@@ -400,13 +400,13 @@ class SwagProcessor(DataProcessor):
 
         examples = [
             InputExample(
-                example_id=line[124],
+                example_id=line[10],
                 question=line[0],  # in the swag dataset, the
                 # common beginning of each
                 # choice is stored in "sent2".
-                contexts=[line[0]]*120,
-                endings=[line[x] for x in range(3,123)],
-                label=line[123],
+                contexts=[line[0]]*11,
+                endings=[line[x] for x in range(3,8)],
+                label=line[8],
             )
             for line in lines[1:]  # we skip the line with the column names
         ]
