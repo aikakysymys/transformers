@@ -548,8 +548,8 @@ def convert_examples_to_features(
 
             choices_inputs.append(inputs)
         
-        print(example.label)
-        print(label_map)
+#         print(example.label)
+#         print(label_map)
         label = label_map[example.label]
         
 
