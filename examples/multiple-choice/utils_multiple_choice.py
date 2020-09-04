@@ -387,7 +387,7 @@ class SwagProcessor(DataProcessor):
 
     def get_labels(self):
         """See base class."""
-        return [str(x) for x in range(120)] # 120
+        return [str(x) for x in range(5)] # 120
 
     def _read_csv(self, input_file):
         with open(input_file, "r", encoding="utf-8") as f:
@@ -576,4 +576,4 @@ def convert_examples_to_features(
 
 
 processors = {"race": RaceProcessor, "swag": SwagProcessor, "arc": ArcProcessor, "syn": SynonymProcessor}
-MULTIPLE_CHOICE_TASKS_NUM_LABELS = {"race", 4, "swag", 120, "arc", 4, "syn", 5}
+MULTIPLE_CHOICE_TASKS_NUM_LABELS = {"race", 4, "swag", 5, "arc", 4, "syn", 5}
